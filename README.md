@@ -29,11 +29,28 @@ We recommend training on a GPU. Our networks are large enough to a point where i
 
 ### Training and Dataset
 
-* Download the [nsynth dataset](https://magenta.tensorflow.org/datasets/nsynth). Please use the JSONWAV version of the dataset.
+* Download the [nsynth dataset](https://magenta.tensorflow.org/datasets/nsynth). Please use the JSON/WAV version of the dataset.
 * Extract your `train`, `valid` and `test` tar archives into the `./data/nsynth/`` folder.
 * The fastest way to start training is to use `train.sh`. Just run `./train.sh` to get going.
 * Parameters such as batch-size and number of epochs are accessible as arguments to `train.py`.
 * To run style transfer, use `StyleTransferProject.ipynb`.
+
+
+---
+### Files and Folders
+
+#### Files:
+
+* `train.py` is our training routine file.
+* `utils.py` contains the code for validation, dataset loading and helpers for saving files.
+* `VGG_pytorch.py` and `Alvin.py` are our model files. Running `alvin_big` from the models folder requires `VGG_pytorch.py`. `Alvin.py` contains both models for training.
+
+### Folders:
+
+* The `data` folder is where you will be storing the nsynth dataset.
+* The `models` folder contains the pth models we prepared for submission. Additionally, it's where models are saved after every epoch.
+* The `test_data` folder contains some example files you can use for style transfer. Some of the examples are from the nsynth dataset.
+* The `runs` folder is where you'd be storing your tensorboard runs.
 
 
 ---
